@@ -45,6 +45,17 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+		else if (findKeyword(statement, "I like my cat Mittens.") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (findKeyword(statement, "Mr. Chen is teaching us about computer science.") >= 0)
+		{
+			response = "He sounds super awesome and cool and you should give him $100.";
+		}
+		else if (statement.trim().length() == 0){
+            response = "Talk to me.";
+		}
 		else
 		{
 			response = getRandomResponse();
@@ -170,6 +181,14 @@ public class Magpie3
 		{
 			response = "You don't say.";
 		}
+		 else if (whichResponse == 4)
+        {
+            response = "Excuse me.";
+        }
+        else if (whichResponse == 5)
+        {
+            response = "What was that again?";
+        }
 
 		return response;
 	}
